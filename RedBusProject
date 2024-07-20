@@ -1,0 +1,51 @@
+public class RedBusProject {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to Red Bus Booking System");
+        System.out.println("Please select the type of booking:");
+        System.out.println("1. Train");
+        System.out.println("2. Bus");
+        System.out.println("3. Flight");
+        
+        int choice = scanner.nextInt();
+        scanner.nextLine(); 
+
+        String type = "";
+        switch (choice) {
+            case 1:
+                type = "Train";
+                break;
+            case 2:
+                type = "Bus";
+                break;
+            case 3:
+                type = "Flight";
+                break;
+            default:
+                System.out.println("Invalid choice");
+                return;
+        }
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your destination: ");
+        String destination = scanner.nextLine();
+
+        System.out.print("Enter date of travel (dd/mm/yyyy): ");
+        String dateOfTravel = scanner.nextLine();
+
+        System.out.print("Enter number of tickets: ");
+        int numberOfTickets = scanner.nextInt();
+
+        System.out.println("\nBooking Summary:");
+        System.out.println("Name: " + name);
+        System.out.println("Booking Type: " + type);
+        System.out.println("Destination: " + destination);
+        System.out.println("Date of Travel: " + dateOfTravel);
+        System.out.println("Number of Tickets: " + numberOfTickets);
+        System.out.println("Thank You \nHave a Safe Journey");
+    }
+}
